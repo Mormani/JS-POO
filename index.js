@@ -1,0 +1,1 @@
+const cliente1Nome = "Ricardo";
