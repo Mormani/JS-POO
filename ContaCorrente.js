@@ -1,22 +1,17 @@
+import { Cliente } from "./Cliente.js";
+
 export class ContaCorrente {
     agencia;
 
     /* Atributo Privado */
     #saldo = 0;
+    #cliente;
 
-    depositar(valor) {
+    set cliente(novoValor) { if(novoValor instanceof Cliente) this.#cliente = novoValor; }
+    get cliente() { return this.#cliente }
 
-        if(valor > 0)
-            this.#saldo += valor;
+    get saldo() { return this.#saldo }
 
-        console.log(`Valor após deposito: ${this.#saldo}\n`);
-    }
-
-    sacar(valor) {
-
-        if(this.#saldo >= valor)
-            this.#saldo -= valor;
-
-        console.log(`Valor após saque: ${this.#saldo}\n`);
-    }
+    depositar(valor) { if(valor > 0) this.#saldo += valor; }
+    sacar(valor) { if(this.#saldo >= valor) this.#saldo -= valor; }
 }
