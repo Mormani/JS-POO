@@ -2,7 +2,6 @@ import {Cliente} from "./Cliente.js"
 import {ContaCorrente} from "./ContaCorrente.js"
 
 const cliente1 = new Cliente("Ricardo", 11122233309);
-
 const ccRicardo = new ContaCorrente(1001, cliente1);
 console.log(ccRicardo);
 console.log(ccRicardo.cliente);

@@ -4,7 +4,7 @@
   "description": "Projeto do ByteBank",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node Segundo-Curso/index.js"
   },
   "repository": {
     "type": "git",
