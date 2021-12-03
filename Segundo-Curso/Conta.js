@@ -37,7 +37,7 @@ export class Conta {
     sacar(valor) {
 
         let taxa = 1;
-        return this.#sacar(valor, taxa);
+        return this._sacar(valor, taxa);
     }
 
     transferir(valor, conta) {
@@ -45,8 +45,8 @@ export class Conta {
         conta.depositar(valorSacado);
     }
 
-    // Metódos Protegidos
-    #sacar(valor, taxa) {
+    // Metódos Protegidos (Convenção)
+    _sacar(valor, taxa) {
 
         const valorSacado = valor * taxa;
 
