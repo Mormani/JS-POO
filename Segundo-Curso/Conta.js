@@ -34,16 +34,13 @@ export class Conta {
         return this.#saldo += valor;
     }
 
-    sacar(valor) {
-
-        let taxa = 1;
-        return this._sacar(valor, taxa);
-    }
-
     transferir(valor, conta) {
         const valorSacado = this.sacar(valor);
         conta.depositar(valorSacado);
     }
+
+    // Metódos Abstratos
+    sacar(valor) { throw new Error("O metódo sacar da Conta é abstrato."); }
 
     // Metódos Protegidos (Convenção)
     _sacar(valor, taxa) {

@@ -6,5 +6,6 @@ export class Cliente {
     // Setters e Getters
     get cpf() { return this.#cpf }
 
+    // Construtor
     constructor(nome, cpf) { this.nome = nome; this.#cpf = cpf; }
 }
