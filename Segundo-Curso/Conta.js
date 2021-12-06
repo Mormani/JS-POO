@@ -19,6 +19,10 @@ export class Conta {
     // Construtor
     constructor(saldoIni, cliente, agencia) {
 
+        if(this.constructor == Conta){
+            throw new Error("Você não deveria instanciar um Objeto da Classe Conta, diretamente.");
+        }
+
         if(cliente instanceof Cliente)
             this.#cliente = cliente;
         else
