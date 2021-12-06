@@ -5,14 +5,23 @@ export class Funcionario {
     #cpf;
     #salario;
     #bonificacao;
+    #senha;
+
+    // Setters e Getters
+    get senha() { return this.#senha; }
 
     // Construtor
-    constructor(nome, cpf, salario) {
+    constructor(nome, cpf, salario, bonificacao) {
 
         this.#nome = nome;
         this.#cpf = cpf;
         this.#salario = salario;
+        this.#bonificacao = bonificacao;
+    }
 
-        this.#bonificacao = 1;
+    // Metódos Públicos
+    cadastrarSenha(senha) {
+
+        this.#senha = senha;
     }
 }
