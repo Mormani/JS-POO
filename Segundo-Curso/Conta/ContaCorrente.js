@@ -15,7 +15,7 @@ export class ContaCorrente extends Conta {
     // Metódos Públicos
     sacar(valor) {
 
-        let taxa = 1.1;
+        const taxa = 1.1;
         return super._sacar(valor, taxa);
     }
 }
