@@ -1,7 +1,8 @@
 export class SistemaAutenticação {
 
-    static login (funcionario, senha) {
+    // Metódos Públicos
+    static login(auth, senha) {
 
-        return funcionario.senha == senha;
+        return auth.autenticar(senha);
     }
 }

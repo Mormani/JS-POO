@@ -24,4 +24,6 @@ export class Funcionario {
 
         this.#senha = senha;
     }
+
+    autenticar(senha) { return this.#senha == senha; }
 }
